@@ -1,1 +1,346 @@
 <!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>🔴 🟡 🟢</title>
+            <link rel="shortcut icon" href="icon1.ico" type="image/x-icon" />
+            <style>
+                body {
+                    background-color: rgb(238, 235, 231);
+                    white-space: pre;
+                }
+                #greeting{
+                    z-index: 7;
+                    filter: blur(4px);
+                    position:static;
+                    color:rgb(255, 255, 255);
+                    background-color: rgb(109, 114, 64);
+                    /* text-shadow:0px 30px 0px rgb(255, 255, 255); */
+                    border-top:5px solid rgb(238, 255, 0);
+                    width:fit-content;
+                    line-height: 8vh;
+                    left:0px;
+                    top: 7vh;
+                    font-size: 18vh;
+                    font-family: Courier New;
+                    text-align: right;
+                }
+                #light{
+                    z-index: 310;
+                    position:fixed;
+                    color:rgb(255, 255, 255);
+                    width:fit-content;
+                    font-size: 5vh;
+                    line-height: 21vh;
+                    left:70vw;
+                    top: 40vh;
+                    font-family: Courier New;
+                    text-align: left;
+                    background-color: black;
+                }
+                #car{
+                    z-index: 111;
+                    position:absolute;
+                    color:rgb(255, 255, 255);
+                    width:fit-content;
+                    font-size: 8vh;
+                    line-height: 21vh;
+                    left:92vw;
+                    top: 91vh;
+                    font-family: Courier New;
+                    text-align: left;
+                }
+                #icon{
+                    /* background-color: blue; */
+                    opacity: .0;
+                    z-index: 311;
+                    padding-left: 0;
+                    padding-top: 26vh;
+                    padding-bottom: 0;
+                    padding-right: 0;
+                    position: sticky;
+                    left: 92vw;
+                    top: 97vh;
+                    width: 8vw;
+                }#icon:hover{opacity: 1;}
+
+                #text{
+                    z-index: 211;
+                    position:fixed;
+                    color:white;
+                    background-color: red;
+                    width:fit-content;
+                    line-height: 2vw;
+                    right: -20vw;
+                    top: 0vh;
+                    font-size: 2vw;
+                    font-family: Courier New;
+                    text-align: right;
+                }#text:hover{
+                    transition: right 6s;
+                    color:black;
+                    background-color:greenyellow;
+                    right: 0vw;
+                }
+
+                #answersheet {
+                    transition: filter 6s;
+                    transition: width 6s;
+                    z-index: 0;
+                    position: fixed;
+                    top: 0vh;
+                    left: 0vw;
+                    height: 100vh;
+                    opacity: .05;
+                }
+                #answersheet:hover{
+                    filter: blur(4px);
+                    width:200vw;
+                    top: -50vh;
+                    left: -50vw;
+                }
+
+                #tree{
+                    z-index: 10;
+                    position: absolute;
+                    top: 0px;
+                    left: 10vw;
+                    width: 90vw;
+                    height: 100vh;
+                }
+                .bg{
+                    transition: filter 0.5s;
+                }
+                #bg1{
+                    z-index: 8;
+                    filter: blur(4px);
+                    position: absolute;
+                    top: 10vh;
+                    left: 30vw;
+                    height: 60vh;
+                }
+                #bg1:hover{
+                    z-index: 9;
+                    filter: blur(1.5px);
+                } 
+                /* #bg1:hover{
+                    z-index: 110;
+                    filter: blur(0px);
+                    top: 30vh;
+                    left: 40vw;
+                    height: 40vh;
+                    border-color: aquamarine;
+                    border-width: 10px;
+                }  */
+                #bg2{
+                    z-index: 8;
+                    filter: blur(4px);
+                    position: absolute;
+                    top: 33vh;
+                    left: 116vw;
+                    height: 40vh;
+                }
+                #bg2:hover{
+                    z-index: 9;
+                    filter: blur(1px);
+                }
+                #bg3{
+                    z-index: 7;
+                    filter: blur(5px);
+                    position: absolute;
+                    top: 2vh;
+                    left: 0vw;
+                    height: 30vh;
+                }
+                #bg3:hover{
+                    z-index: 9;
+                    filter: blur(2px);
+                }
+                #bg4{
+                    z-index: 6;
+                    filter: blur(7px);
+                    position: absolute;
+                    top: -30vh;
+                    left: 20vw;
+                    width: 100vw;
+                }
+                #bg4:hover{
+                    z-index: 9;
+                    filter: blur(2px);
+                }
+                #bg5{
+                    z-index: 5;
+                    filter: blur(6px);
+                    position: absolute;
+                    top: 5vh;
+                    left: 122vw;
+                    width: 57vw;
+                }
+                #bg5:hover{
+                    z-index: 9;
+                    filter: blur(2px);
+                }
+                .video{
+                    transition: filter 0.5s;
+                }
+                
+                #vd {
+                    filter: brightness(250%);
+                    position: fixed;
+                    width: 12vw;
+                    top: 27.8vh;
+                    left: 75vw;
+                    border-radius: 80vw 80vw 80vw 80vw;
+                    z-index: 111;
+                }#vd:hover {filter: brightness(100%);}
+                #xk1 {
+                    z-index:110;
+                    filter: drop-shadow(15px 30px 25px green);
+                    position: fixed;
+                    width: 40vw;
+                    top: 5vh;
+                    left: 60.7vw;
+                }#xk1:hover {filter: brightness(600%) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.239));}
+                #vd3 {
+                    filter: brightness(250%);
+                    position:fixed;
+                    width: 28vw;
+                    top: 20vh;
+                    left: 8vw;
+                    border-radius: 0px 0px 0px 0px;
+                    z-index: 113;
+                }#vd3:hover {filter: brightness(100%);}
+                #xk2 {
+                    z-index: 112;
+                    filter: drop-shadow(10px 20px 18px rgba(238, 130, 238, 0.697));
+                    position: fixed;
+                    width: 44.5vw;
+                    height: 38vw;
+                    top: 7vh;
+                    left: 0vw;
+                }#xk2:hover {filter: brightness(600%) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.239));}
+                #vd2 {
+                    filter: invert(100%);
+                    position:fixed;
+                    width: 8vw;
+                    top: 70vh;
+                    left: 25vw;
+                    border-radius: 0px 0px 0px 0px;
+                    z-index: 115;
+                } #vd2:hover {filter: invert(0%);}
+                #xk3 {
+                    z-index: 114;
+                    filter: drop-shadow(8px 16px 12px rgb(206, 240, 54));
+                    position: fixed;
+                    width: 18vw;
+                    height: 18vw;
+                    top: 63vh;
+                    left: 20vw;
+                }#xk3:hover {filter: brightness(400%) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.239));}
+                
+                #go:link {
+                    z-index: 210;
+                    position:fixed;
+                    color:rgb(0, 0, 0);
+                    width:fit-content;
+                    line-height: 5vh;
+                    right: 42vw;
+                    bottom: 25vh;
+                    font-size: 5vh;
+                    font-family: Courier New;
+                    text-align:center;
+                    /* text-decoration: none;  */
+                }
+                #go:visited {
+                    color: purple;
+                    /* text-decoration: none;  */
+                }
+                #go:hover {
+                    z-index: 412;
+                    transition: font-size 0.3s;
+                    transition: letter-spacing 2s;
+                    font-size: 45vh;
+                    font-family: Arial, Helvetica, sans-serif;
+                    letter-spacing: -11vh;
+                    color: blue;
+                    font-style: italic; 
+                    text-decoration: none; 
+                    right: 11vh;
+                    bottom: 25vh;
+                }
+                #go:active {
+                    color: blue;
+                }
+                #go1:link {
+                    z-index: 210;
+                    position:fixed;
+                    color:rgb(0, 0, 0);
+                    width:fit-content;
+                    line-height: 5vh;
+                    right: 42vw;
+                    bottom: 25vh;
+                    font-size: 5vh;
+                    font-family: Courier New;
+                    text-align:center;
+                }
+                #go1:visited {
+                    color: purple;
+                }
+                #go1:hover {
+                    z-index: 412;
+                    transition: font-size 0.3s;
+                    transition: letter-spacing 2s;
+                    font-size: 45vh;
+                    font-family: Arial, Helvetica, sans-serif;
+                    letter-spacing: -11vh;
+                    color: blue;
+                    font-style: italic; 
+                    text-decoration:underline; 
+                    filter: drop-shadow(0px 0px 10px white);
+                    right: 11vh;
+                    bottom: 25vh;
+                }
+                #go1:active {
+                    color: blue;
+                }
+            </style>
+        </head>
+        <body>
+            <img id="answersheet" src="papert.png">
+
+            <!-- <div id="greeting">^^</div>
+            <div id="greeting">@#akdjhsf***——————</div>
+            <div id="greeting">```~!@||\\\@@⬇#</div>
+            <div id="greeting">‼️‼️\\</div> -->
+
+            <img class="bg" id="bg5" src="bg5.jpeg">
+            <img class="bg" id="bg4" src="bg4.jpeg">
+            <img class="bg" id="bg3" src="bg3.jpeg">
+            <img class="bg" id="bg2" src="bg2.jpeg">
+            <img class="bg" id="bg1" src="bg.jpg">
+
+            <video loop controls id="vd" src="vd.MOV" class="video" type="video/mov"></video>
+            <a href="https://www.google.com/maps/@77.7859292,-70.6483602,3a,75y,154.18h,46.75t/data=!3m6!1e1!3m4!1snKuiOxvKzPZkShLFXK4qPQ!2e0!7i13312!8i6656?entry=ttu">
+                <img id="xk1" src="xk1.png"></a>
+            <video loop controls id="vd3" src="vd3.MOV" class="video" type="video/mov"></video>
+            <a href="https://www.google.com/maps/contrib/103433160925731202023/photos/@-22.9059399,-43.1765284,3a,75y,90t/data=!3m7!1e5!3m5!1sAF1QipNGqRaeDVRYZFSyEQvjmsx3UvRrX8VlVpt-1WCK!2e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNGqRaeDVRYZFSyEQvjmsx3UvRrX8VlVpt-1WCK%3Dw365-h648-k-no!7i1080!8i1920!4m3!8m2!3m1!1e1?entry=ttu">
+                <img id="xk2" src="xk2.png"></a>
+            <video loop controls id="vd2" src="vd2.MOV" class="video" type="video/mov"></video>
+            <a href="https://www.google.com/maps/@-76.090968,21.3749669,3a,75y,90t/data=!3m8!1e5!3m6!1sAF1QipNVdoqcSKFORiKX1HNwWApLWytsXF3l-FCN0r5U!2e10!3e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNVdoqcSKFORiKX1HNwWApLWytsXF3l-FCN0r5U%3Dw203-h365-k-no!7i400!8i720?entry=ttu">
+                <img id="xk3" src="xk3.png"></a>
+
+            <!-- <img id="tree" src="tree.png"> -->
+
+            <div id="text">oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd toooooo????? ooooon the??????????????? rrrooooadd to???? on the???????????? oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd toooooo????? ooooon the??????????????? rrrooooadd to???? on the???????????? oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd toooooo????? ooooon the??????????????? rrrooooadd to???? on the???????????? oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd toooooo????? ooooon the??????????????? rrrooooadd to???? on the???????????? oooooooon the rrrrrrroooooooaddd oooooooon the rrrrrrroooooooaddd </div>
+            
+            <div><a id="go" href="https://www.google.com/maps/">
+                <span id="go1">where</span> r u</a></div>
+
+            <div id="light">🔴<br>🟡<br>🟢</div>
+            <!-- <div id="car">🚗</div> -->
+            <img id="icon" src="icon1.png">
+        </body>
+    </html>
+
+    <!-- IMAGE SOURCES
+    all photo and video elements(except the picture frames) are original-->
